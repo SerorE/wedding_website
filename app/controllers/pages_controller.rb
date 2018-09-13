@@ -1,4 +1,14 @@
 class PagesController < ApplicationController
-  def home
+  def programme
   end
+
+  def logement
+  end
+
+  def contact
+  end
+
+  def about
+  end
+
 end

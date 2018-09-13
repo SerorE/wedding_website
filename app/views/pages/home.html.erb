@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="lp-container">
+  <h1> Sarah & Elliot</h1>
+
+  <div class="btn-treehouse" id="bt-popup">RSVP</div>
+
+
+  <h2>Week-end du 02/12/18</h2>
+
+
+
+<%= image_tag "back.jpg", {id: "background"}%>
+
+
+  <script type="text/javascript">
+    let popup2;
+    window.addEventListener('DOMContentLoaded', function () {
+        popup2 = window.typeformEmbed.makePopup('https://elliotseror1.typeform.com/to/pZZ1rg', {
+          hideHeaders: true,
+          hideFooter: true
+        });
+      })
+
+      document.getElementById('bt-popup').addEventListener('click', function () {
+        popup2.open();
+      });
+
+  </script>
+  </div>
+
+
+
