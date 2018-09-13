@@ -10,21 +10,19 @@
 
 <%= image_tag "back.jpg", {id: "background"}%>
 
-
-  <script type="text/javascript">
-    let popup2;
-    window.addEventListener('DOMContentLoaded', function () {
-        popup2 = window.typeformEmbed.makePopup('https://elliotseror1.typeform.com/to/pZZ1rg', {
-          hideHeaders: true,
-          hideFooter: true
+    <script type="text/javascript">
+      let popup2;
+      window.addEventListener('DOMContentLoaded', function () {
+          popup2 = window.typeformEmbed.makePopup('https://elliotseror1.typeform.com/to/pZZ1rg', {
+            hideHeaders: true,
+            hideFooter: true
+          });
+        })
+        document.getElementById('bt-popup').addEventListener('click', function () {
+          popup2.open();
         });
-      })
+    </script>
 
-      document.getElementById('bt-popup').addEventListener('click', function () {
-        popup2.open();
-      });
-
-  </script>
   </div>
 
 
