@@ -3,18 +3,18 @@ import "bootstrap";
 
 (function() {
 
-//Display modal on click
-$('.show-prompt-box').click(function(e){
-  e.preventDefault();
-  $('.overlay, .prompt-box, .prompt-wrap').fadeIn();
-});
+// //Display modal on click
+// $('.show-prompt-box').click(function(e){
+//   e.preventDefault();
+//   $('.overlay, .prompt-box, .prompt-wrap').fadeIn();
+// });
 
 //Fade out overlay and prompt-box
-$('.overlay, .close').click(function(){
-  $('.overlay, .prompt-box').fadeOut();
-  $('.code-error').removeClass('is-error');
-  e.stopPropagation();
-});
+// $('.overlay, .close').click(function(){
+//   $('.overlay, .prompt-box').fadeOut();
+//   $('.code-error').removeClass('is-error');
+//   e.stopPropagation();
+// });
 
 
 //Get value and compare to password
@@ -24,6 +24,7 @@ $('.prompt-box form').submit(function(e) {
 
 
   if (codeWord.toLowerCase() == "code") {
+  $('.overlay, .prompt-box').fadeOut();
 
     // alert('yeah');
     //location.href = "/path-to-page/";
