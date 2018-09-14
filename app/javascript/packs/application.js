@@ -1,18 +1,24 @@
 import "bootstrap";
 
+
+//only run if homepage
+
 window.onload = function () {
-    if (localStorage.getItem("hasCodeRunBefore") === null) {
+    // if (localStorage.getItem("hasCodeRunBefore") === null) {
   jQuery(overlay).fadeIn("slow");
   jQuery(promptBox).fadeIn("slow");
-
-        localStorage.setItem("hasCodeRunBefore", true);
-    }
+    //     localStorage.setItem("hasCodeRunBefore", true);
+    // }
 }
 
 
 const promptBox = document.getElementById("prompt-box");
 const codeError = document.getElementById("code-error");
 const overlay = document.getElementById("overlay");
+const vendredi = document.getElementById("vendredi");
+console.log(codeError)
+const samedi = document.getElementById("samedi");
+
 
 function activateConsequences(array){
 
@@ -21,10 +27,10 @@ if (array[1] == true){
   jQuery(promptBox).fadeOut("slow");
 
 } else {
-    codeError.classList.toggle("is-error");
-    promptBox.classList.toggle("shake");
+    codeError.classList.add("is-error");
+    promptBox.classList.add("shake");
     setTimeout(function() {
-        promptBox.classList.toggle("shake")
+        promptBox.classList.remove("shake")
     }, 1000);
 }
 };
@@ -47,6 +53,29 @@ if (mdp.toLowerCase() == "bary" ||
 return [mdp, solved];
 };
 
+function displayProgramAccordingly(arr){
+if (arr[1] == false){
+  return;
+} else {
+    if (arr[0] == "seror") {
+      console.log("vendredi et dimanche - potes");
+    }
+    else if (arr[0] == "flicoteaux"){
+      console.log("samedi et dimanche - famille");
+    }
+    else if (arr[0] == "bary"){
+      console.log("tout - très proches");
+        vendredi.classList.remove("hide");
+        samedi.classList.remove("hide");
+    }
+    else if (arr[0] == "prawidlo"){
+      console.log("juste dimanche");
+    }
+    else {
+  console.log("erreur, merci de contacter sarah et elliot");
+    };
+}
+};
 
 
 
@@ -54,9 +83,9 @@ $('.prompt-box form').submit( function(e) {
 
   e.preventDefault();
   var codeWord = $('.mdp').val();
-  checkpassword(codeWord);
-  activateConsequences(checkpassword(codeWord));
-  console.log(checkpassword(codeWord));
+  var arr = checkpassword(codeWord)
+  activateConsequences(arr);
+  displayProgramAccordingly(arr)
 });
 
 

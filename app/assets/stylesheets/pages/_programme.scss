@@ -4,14 +4,15 @@ h1{
 }
   padding-top: 20px;
   padding-bottom: 20px;
-
-  background-color: #ffe2ff;
+  background-color: #f5e9ff;
 
 justify-content: center;
 
 .un-event{
 min-height:200px;
   margin:  auto ;
+  min-width:570px;
+
 
   margin-bottom: 20px;
 
@@ -57,10 +58,12 @@ box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
   }
   }
   .infos{
+        font-size: 13px;
+
     font-weight:lighter;
     display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   }
 
   .text-description{
@@ -75,4 +78,8 @@ box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
   padding-right:10px;
   }
 
+}
+
+.hide {
+    display: none;
 }
