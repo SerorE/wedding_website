@@ -5,20 +5,12 @@
 
 
 .lp-container{
-  // background: url(images/back.jpg) no-repeat center center fixed;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
 
-  //   -webkit-filter: grayscale(1);
-  // filter: grayscale(1);
 text-align: center;
 h1{
   font-size: 60px;
   margin: 50px 0px;
   font-family: 'Satisfy', cursive;
-
 }
 
 h2 {
@@ -102,7 +94,7 @@ justify-content: space-between;
 
 
 .overlay {
-  // display: none;
+  display: none;
   background: rgba(0, 0, 0, .6);
   position:fixed;
   top: 0;
@@ -123,7 +115,7 @@ justify-content: space-between;
 }
 
 .prompt-box {
-  // display: none;
+  display: none;
   padding: 50px;
   background: #f7f7f7;
   max-width: 350px;

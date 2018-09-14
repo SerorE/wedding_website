@@ -23,16 +23,17 @@
         });
     </script>
 
-<div class="overlay"></div>
+
+<div class="overlay" id="overlay"></div>
     <div class="prompt-wrap">
 
-        <div class="prompt-box">
+        <div id="prompt-box" class="prompt-box">
 
           <form>
               <span class="close" onclick="closeModal();"></span>
             <p>Merci d'entrer le mot de passe indiqué sur le faire part</p>
-            <p class="code-error">Code Invalide</p>
-            <input name="clients" class="clients" type="text" placeholder="Code">
+            <p class="code-error" id="code-error">Code Invalide</p>
+            <input name="mdp" class="mdp" type="text" placeholder="Code">
             <button class="btn-entrer"> Entrer</button>
           </form>
         </div>

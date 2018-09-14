@@ -1,42 +1,71 @@
 import "bootstrap";
 
+window.onload = function () {
+    if (localStorage.getItem("hasCodeRunBefore") === null) {
+  jQuery(overlay).fadeIn("slow");
+  jQuery(promptBox).fadeIn("slow");
 
-(function() {
-
-// //Display modal on click
-// $('.show-prompt-box').click(function(e){
-//   e.preventDefault();
-//   $('.overlay, .prompt-box, .prompt-wrap').fadeIn();
-// });
-
-//Fade out overlay and prompt-box
-// $('.overlay, .close').click(function(){
-//   $('.overlay, .prompt-box').fadeOut();
-//   $('.code-error').removeClass('is-error');
-//   e.stopPropagation();
-// });
+        localStorage.setItem("hasCodeRunBefore", true);
+    }
+}
 
 
-//Get value and compare to password
-$('.prompt-box form').submit(function(e) {
-  e.preventDefault();
-  var codeWord = $('.clients').val();
+const promptBox = document.getElementById("prompt-box");
+const codeError = document.getElementById("code-error");
+const overlay = document.getElementById("overlay");
 
+function activateConsequences(array){
 
-  if (codeWord.toLowerCase() == "code") {
-  $('.overlay, .prompt-box').fadeOut();
-
-    // alert('yeah');
-    //location.href = "/path-to-page/";
+if (array[1] == true){
+  jQuery(overlay).fadeOut("slow");
+  jQuery(promptBox).fadeOut("slow");
 
 } else {
-    $('.code-error').addClass('is-error');
-    $('.prompt-box').addClass('shake');
+    codeError.classList.toggle("is-error");
+    promptBox.classList.toggle("shake");
     setTimeout(function() {
-        $('.prompt-box').removeClass('shake')
+        promptBox.classList.toggle("shake")
     }, 1000);
-
 }
+};
+
+
+function checkpassword(mdp){
+  var solved
+
+if (mdp.toLowerCase() == "bary" ||
+      mdp.toLowerCase() == "flicoteaux" ||
+      mdp.toLowerCase() == "seror" ||
+      mdp.toLowerCase() == "prawidlo"
+    ) {
+  solved = true;
+
+} else {
+  solved = false;
+}
+
+return [mdp, solved];
+};
+
+
+
+
+$('.prompt-box form').submit( function(e) {
+
+  e.preventDefault();
+  var codeWord = $('.mdp').val();
+  checkpassword(codeWord);
+  activateConsequences(checkpassword(codeWord));
+  console.log(checkpassword(codeWord));
 });
 
-})();
+
+
+
+
+
+// $('.btn-treehouse').click( function () {
+//   console.log(codeWord);
+// }
+
+//   )

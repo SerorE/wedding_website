@@ -1,0 +1,78 @@
+.text-container-programme{
+h1{
+  color:white;
+}
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: #ffe2ff;
+
+justify-content: center;
+
+.un-event{
+min-height:200px;
+  margin:  auto ;
+
+  margin-bottom: 20px;
+
+  width: 50%;
+  background-color: white;
+  // border-style: solid;
+  // border-width: 1px;
+  // border-color: ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  -webkit-box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
+-moz-box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
+box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
+}
+
+  .display-date{
+  margin: 30px 5px;
+  padding-right: 10px;
+  border-right: 1px dotted black;
+  font-family: 'Abril Fatface', cursive;
+  color: rgb(200,200,200);
+  text-align: center;
+  .day{
+    font-size: 40px;
+  }
+  .month{
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+  }
+
+  .description{
+    padding:10px;
+    text-align: center;
+    min-width:400px;
+  .title{
+    font-family: Satisfy;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  }
+  .infos{
+    font-weight:lighter;
+    display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  }
+
+  .text-description{
+        font-size: 15px;
+
+    margin-top:10px;
+    text-align:left;
+  }
+
+
+  .far, .fas {
+  padding-right:10px;
+  }
+
+}
