@@ -2,64 +2,52 @@ import "bootstrap";
 
 //actions controller here
 
+
 var url = window.location.href;
-var pwd_array = ["",false];
 
-// if (url == "http://localhost:3000/" ||
-//     url == "http://www.sarahetelliot.fr/" ||
-//     url == "http://sarahetelliot.fr/"){
-// askforcode()
-// }
 
-if (pwd_array[1]==false){
-pwd_array = askforcode()
-sessionStorage.setItem("session_array", pwd_array);
+ var session_solved = sessionStorage.getItem("session_solved");
+
+if (url == "http://localhost:3000/" ||
+    url == "http://www.sarahetelliot.fr/" ||
+    url == "http://sarahetelliot.fr/" && session_solved != true){
+const promptBox = document.getElementById("prompt-box");
+const codeError = document.getElementById("code-error");
+const overlay = document.getElementById("overlay");
+
+askforcode(promptBox,overlay,codeError);
+// console.log("done with ask for code")
+// console.log(sessionStorage.getItem("session_array"));
 }
 //changer cette condition à si pas de code valide
 else if (url == "http://localhost:3000/programme" ||
     url == "http://www.sarahetelliot.fr/programme" ||
     url == "http://sarahetelliot.fr/programme"){
-pwd_array = sessionStorage.getItem("session_array");
-addToProgramme(pwd_array);
-}
 
 
+var session_password = sessionStorage.getItem("session_password");
+const vendredi = document.getElementById("vendredi");
+const samedi = document.getElementById("samedi");
 
-//only run if homepage
+if (session_password == "seror") {
+      vendredi.classList.remove("hide");
+      console.log("vendredi et dimanche - potes");
+    }
+    else if (session_password == "flicoteaux"){
+      console.log("samedi et dimanche - famille");
+      samedi.classList.remove("hide");
+    }
+    else if (session_password == "bary"){
+      console.log("tout - très proches");
+        vendredi.classList.remove("hide");
+        samedi.classList.remove("hide");
+    }
+    else if (session_password == "prawidlo"){
+      console.log("juste dimanche");
+    }
+};
 
-// window.onload = function () {
-//     // if (localStorage.getItem("hasCodeRunBefore") === null) {
-
-//     //     localStorage.setItem("hasCodeRunBefore", true);
-//     // }
-// }
-
-
-// const promptBox = document.getElementById("prompt-box");
-// const codeError = document.getElementById("code-error");
-// const overlay = document.getElementById("overlay");
-// const vendredi = document.getElementById("vendredi");
-// console.log(codeError)
-// const samedi = document.getElementById("samedi");
-
-
-// function activateConsequences(array){
-
-// if (array[1] == true){
-//   jQuery(overlay).fadeOut("slow");
-//   jQuery(promptBox).fadeOut("slow");
-
-// } else {
-//     codeError.classList.add("is-error");
-//     promptBox.classList.add("shake");
-//     setTimeout(function() {
-//         promptBox.classList.remove("shake")
-//     }, 1000);
-// }
-// };
-
-
-function checkpassword(mdp){
+function checkpassword(mdp,promptBox,overlay,codeError){
   var solved
 
 if (mdp.toLowerCase() == "bary" ||
@@ -68,48 +56,32 @@ if (mdp.toLowerCase() == "bary" ||
       mdp.toLowerCase() == "prawidlo"
     ) {
   solved = true;
+  jQuery(overlay).fadeOut("slow");
+  jQuery(promptBox).fadeOut("slow");
 
 } else {
-  solved = false;
+    solved = false;
+    codeError.classList.add("is-error");
+    promptBox.classList.add("shake");
+    setTimeout(function() {
+        promptBox.classList.remove("shake")
+    }, 1000);
 }
+  sessionStorage.setItem("session_password", mdp);
+  sessionStorage.setItem("session_solved", solved);
 
-return [mdp, solved];
 };
 
-// function displayProgramAccordingly(arr){
-// if (arr[1] == false){
-//   return;
-// } else {
-//     if (arr[0] == "seror") {
-//       console.log("vendredi et dimanche - potes");
-//     }
-//     else if (arr[0] == "flicoteaux"){
-//       console.log("samedi et dimanche - famille");
-//     }
-//     else if (arr[0] == "bary"){
-//       console.log("tout - très proches");
-//         vendredi.classList.remove("hide");
-//         samedi.classList.remove("hide");
-//     }
-//     else if (arr[0] == "prawidlo"){
-//       console.log("juste dimanche");
-//     }
-//     else {
-//   console.log("erreur, merci de contacter sarah et elliot");
-//     };
-// }
-// };
 
-function (askforcode){
+function askforcode(promptBox,overlay,codeError){
   jQuery(overlay).fadeIn("slow");
   jQuery(promptBox).fadeIn("slow");
-$('.prompt-box form').submit( function(e) {
 
+$('.prompt-box form').submit( function(e) {
   e.preventDefault();
   var codeWord = $('.mdp').val();
-  var arr = checkpassword(codeWord)
-  activateConsequences(arr);
-  displayProgramAccordingly(arr)
+  var pwd_array = checkpassword(codeWord,promptBox,overlay,codeError)
+  sessionStorage.setItem("session_array", pwd_array);
 });
 
 };
