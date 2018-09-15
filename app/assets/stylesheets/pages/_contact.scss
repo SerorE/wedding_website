@@ -1,11 +1,19 @@
 .text-container{
   padding-left: 20px;
 
+.role{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
 .person{
     text-align: center;
 align-content: center;
 width: 40%;
 }
+
 .avatar{
   margin: 15px auto;
   background-color:grey;
