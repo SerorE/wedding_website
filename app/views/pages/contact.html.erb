@@ -1,14 +1,50 @@
 <div class="text-container">
+
 <h1>Contacts utiles</h1>
 
-<p class ="un-contact"> Pour de l'aide sur les logements: <a href="mailto:eprawidlo@icloud.fr">     Evelyne Prawidlo</a>
-</p>
 
-<p class ="un-contact"> Responsable liste et cadeaux: <a href="mailto:revahelie@gmail.com">    Elie Revah</a>
-</p>
+  <div class="une-carte" >
+    <div class="role">
+      <h3>Responsable logistique</h3>
+      <p>Adressez vous à Evelyne pour Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="person">
+      <%= image_tag "evelyn.png", {class: "avatar"}%>
+      <div class="contact">
+        <div class="nom">Evelyn Prawidlo</div>
+        <a href="mailto:eprawidlo@icloud.fr " class="fas fa-envelope"></a>
+      </div>
+    </div>
+  </div>
 
-<p class ="un-contact"> Si vous souhaitez faire un discours, merci de vous adresser à: <a href="mailto:mael_seror@yahoo.fr">    Maël Seror</a>
-</p>
-
-
+  <div class="une-carte" >
+    <div class="role">
+      <h3>Responsable liste et cadeaux</h3>
+      <p>Adressez vous à Elie pour Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="person">
+      <%= image_tag "elie.png", {class: "avatar"}%>
+      <div class="contact">
+        <div class="nom">Elie Revah</div>
+        <a href="mailto:revahelie@gmail.com" class="fas fa-envelope"> </a>
+      </div>
+  </div>
 </div>
+
+
+  <div class="une-carte" >
+    <div class="role">
+      <h3>Responsable discours:</h3>
+      <p>Adressez vous à Maël pour Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="person">
+      <%= image_tag "mael.png", {class: "avatar"}%>
+      <div class="contact">
+        <div class="nom">Maël Seror</div>
+        <a href="mailto:mael_seror@yahoo.fr" class="fas fa-envelope"> </a>
+      </div>
+    </div>
+  </div>
+
+
+  </div>

@@ -3,18 +3,17 @@
   min-height: 80vh;
 }
 
-
 .lp-container{
-
+  color: white;
 text-align: center;
 h1{
-  font-size: 60px;
+  font-size: 70px;
   margin: 50px 0px;
   font-family: 'Satisfy', cursive;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 40px;
   letter-spacing: 5px;
   font-weight: lighter;
   font-family: 'Satisfy', cursive;
@@ -39,8 +38,12 @@ h2 {
   left: 0;
   //   -webkit-filter: grayscale(1);
   // filter: grayscale(1);
-    filter: grayscale(1) contrast(3);
-    opacity: 0.2;
+    // filter: grayscale(1) contrast(3);
+    // opacity: 0.2;
+
+
+    filter: brightness(50%);
+-webkit-filter: brightness(50%);
 }
 
 @media screen and (orientation: portrait){

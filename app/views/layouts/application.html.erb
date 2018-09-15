@@ -20,11 +20,12 @@
 
     <%= yield %>
 
-        </div>
+    </div>
+    <%= render 'shared/footer' %>
+
     <script src="https://embed.typeform.com/embed.js"></script>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <%= render 'shared/footer' %>
 
   </body>
 </html>

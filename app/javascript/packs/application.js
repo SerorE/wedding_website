@@ -1,20 +1,16 @@
 import "bootstrap";
 
-//actions controller here
-
-
 var url = window.location.href;
-
 
  var session_solved = sessionStorage.getItem("session_solved");
 
-if (url == "http://localhost:3000/" ||
+if ((url == "http://localhost:3000/" ||
     url == "http://www.sarahetelliot.fr/" ||
-    url == "http://sarahetelliot.fr/" && session_solved != true){
+    url == "http://sarahetelliot.fr/") && (session_solved != "true")){
 const promptBox = document.getElementById("prompt-box");
 const codeError = document.getElementById("code-error");
 const overlay = document.getElementById("overlay");
-
+console.log(session_solved);
 askforcode(promptBox,overlay,codeError);
 // console.log("done with ask for code")
 // console.log(sessionStorage.getItem("session_array"));
@@ -85,12 +81,3 @@ $('.prompt-box form').submit( function(e) {
 });
 
 };
-
-
-
-
-// $('.btn-treehouse').click( function () {
-//   console.log(codeWord);
-// }
-
-//   )
