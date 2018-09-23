@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'pages#contact'
 
-  get 'logement', to: 'pages#logement'
+  get 'transports', to: 'pages#transports'
+
+  get 'logements', to: 'pages#logements'
 
   get 'about', to: 'pages#about'
 
