@@ -10,6 +10,12 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
 
+  get 'english/about', to: 'pages#about_en'
+  get 'english/about', to: 'pages#about_en'
+  get 'english/about', to: 'pages#about_en'
+  get 'english/about', to: 'pages#about_en'
+
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

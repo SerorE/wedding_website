@@ -6,9 +6,7 @@
 
   <h2>Week-end du 02/12/18</h2>
 
-
-
-<%= image_tag "back.jpg", {id: "background"}%>
+<%= image_tag "back.jpg", {class: "background background-home"}%>
 
     <script type="text/javascript">
       let popup2;
@@ -31,7 +29,7 @@
               <span class="close" onclick="closeModal();"></span>
             <p>Merci d'entrer le mot de passe indiqué sur le faire part</p>
             <p class="code-error" id="code-error">Code Invalide</p>
-            <input name="mdp" class="mdp" type="text" placeholder="Code">
+            <input name="mdp" class="mdp" type="text" placeholder="Code" autocomplete="off">
             <button class="btn-entrer"> Entrer</button>
           </form>
         </div>
