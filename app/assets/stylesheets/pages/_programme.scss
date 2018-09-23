@@ -1,9 +1,46 @@
+
+
+
 .text-container{
 
     min-height: 90vh;
 
+  @media only screen and (max-width: 600px){
+    max-width:90%;
+    background-color: blue;
+  flex-direction: column;
+  max-height: 60vh !important;
+}
 
+#backgroundp{
+
+  z-index: -1;
+  min-height: 100%;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  // max-width: 80%;
+  top: 0;
+  left: 0;
+  //   -webkit-filter: grayscale(1);
+  // filter: grayscale(1);
+    // filter: grayscale(1) contrast(3);
+    // opacity: 0.2;
+
+
+    filter: brightness(70%);
+-webkit-filter: brightness(70%);
+}
+
+// .red{
+//   color: #BE0712;
+//   // font-family: Satisfy;
+// }
 h1{
+  // background-color:rgba(255,255,255,0.7);
   color:white;
   // margin: 10px auto;
 
@@ -13,7 +50,7 @@ h1{
   padding-top: 20px;
   padding-bottom: 20px;
   // background-color: #f5e9ff;
-  background-color: #ff9090;
+  // background-color: #ff9090;
 
     //   background-image: url("leaves-pattern.png");
     // background-repeat: repeat;
@@ -21,6 +58,9 @@ h1{
 
 
 .une-carte{
+
+  font-family: "Open Sans", "Helvetica", "sans-serif";
+
   h3{
     margin-top:10px;
 text-align: center;
@@ -38,28 +78,37 @@ text-align: center;
   -webkit-box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
 -moz-box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
 box-shadow: 9px 7px 19px -9px rgba(150,150,150,1);
-border-radius: 4px;
+border-radius: 5px;
   min-height:200px;
-  min-width:570px;
+  // min-width:570px;
   display: flex;
-  flex-direction: row;
+
   justify-content: space-between;
+
+
+  @media only screen and (max-width: 600px){
+    max-width:90%;
+    background-color: blue;
+  flex-direction: column;
+  // margin: 0px;
+}
 
 }
 .un-event{
 
-
 }
-
   .display-date{
   margin: 30px 5px;
   padding-right: 10px;
   border-right: 1px dotted black;
-  font-family: 'Abril Fatface', cursive;
-  color: rgb(200,200,200);
+
+  // color: rgb(200,200,200);
+  // color: #BE0712;
+
   text-align: center;
   .day{
-    font-size: 40px;
+    font-size: 60px;
+      font-family: 'Abril Fatface', cursive;
   }
   .month{
     font-size: 20px;
@@ -67,18 +116,9 @@ border-radius: 4px;
   }
   }
 
-  .description{
-    padding:10px;
-    text-align: center;
-    min-width:400px;
-  .title{
-    font-family: Satisfy;
-    font-size: 40px;
-    font-weight: bolder;
-  }
-  }
+
   .infos{
-        font-size: 13px;
+        font-size: 16px;
 
     font-weight:lighter;
     display: flex;
@@ -108,3 +148,18 @@ border-radius: 4px;
 .hide {
     display: none;
 }
+
+.description{
+    padding:10px;
+    text-align: center;
+    // min-width:400px;
+
+  }
+
+    .title{
+    font-family: Satisfy;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+
+

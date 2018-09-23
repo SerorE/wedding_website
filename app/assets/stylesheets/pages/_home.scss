@@ -1,8 +1,13 @@
 // Specific CSS for your home-page
 .all-container {
-  min-height: 80vh;
-}
+  min-height: 85vh;
 
+
+    @media only screen and (max-width: 600px){
+
+  max-height: 60vh !important;
+}
+}
 .lp-container{
   color: white;
 text-align: center;
@@ -19,9 +24,6 @@ h2 {
   font-family: 'Satisfy', cursive;
 
 }
-
-
-
 
 #background{
 
@@ -84,7 +86,7 @@ justify-content: space-between;
 }
 .btn-treehouse:hover {
   opacity: 1;
-  background: #4c1343;
+  background: #85040c;
    cursor: pointer;
   text-decoration: none;
   color: white;
