@@ -4,7 +4,7 @@
 .role{
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
 }
 .person{
@@ -15,7 +15,7 @@ width: 200px;
 
 .avatar{
   margin: 15px auto;
-  background-color:grey;
+  background-color: grey;
   width:80px;
   height:80px;
   border-radius:100%;
