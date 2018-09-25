@@ -1,11 +1,12 @@
 .footer {
   background: rgba(190,7,18,0.5);
-  display: flex;
-  align-items: center;
-  text-align: center;
+  font-size: 15px;
+  // display: flex;
+  align-items: left;
+  text-align: left;
   // justify-content: space-between;
   height: 40px;
-  padding: 0px 50px;
+  padding: 7px 20px;
   // color: rgba(0,0,0,0.8);
   color: white;
 }
