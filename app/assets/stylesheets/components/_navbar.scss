@@ -21,6 +21,12 @@
   height: 50px;
 }
 
+#logo_text{
+  font-size: 50px !important;
+  font-family: Satisfy !important;
+  color: #6a0000 !important;
+}
+
 /* User Avatar */
 .navbar-wagon .avatar {
   height: 35px;
@@ -88,3 +94,7 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
+
+.back-home a{
+    text-decoration: none;
+  }
