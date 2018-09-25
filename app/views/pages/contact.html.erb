@@ -5,10 +5,12 @@
 <h1>Contacts utiles</h1>
 <%= image_tag "pp.jpg", {class: "background"}%>
 
-  <div class="une-carte" >
+  <div class="une-carte carte-personne" >
     <div class="role">
       <h3>Les futurs mariés</h3>
-      <p>Les futurs mariès restent à votre disposition pour toutes vos questions. N'hésitez pas à nous contacter ! </p>
+      <div class = "text-description">
+      Nous restons à votre disposition pour toutes vos questions. N'hésitez pas à nous contacter !
+      </div>
     </div>
     <div class="person">
       <%= image_tag "us.png", {class: "avatar"}%>
@@ -18,6 +20,41 @@
       </div>
     </div>
   </div>
+
+
+    <div class="une-carte carte-personne" >
+    <div class="role">
+      <h3>Les parents de Sarah</h3>
+      <div class = "text-description">
+      Nous restons à votre disposition pour toutes vos questions. N'hésitez pas à nous contacter !
+      </div>
+    </div>
+    <div class="person">
+      <%= image_tag "us.png", {class: "avatar"}%>
+      <div class="contact">
+        <div class="nom">Pierre et Muriel</div>
+        <a href="mailto: muriel.flicoteaux@gmail.com" class="fas fa-envelope"> </a>
+      </div>
+    </div>
+  </div>
+
+      <div class="une-carte carte-personne" >
+    <div class="role">
+      <h3>Les parents d'Elliot</h3>
+      <div class = "text-description">
+      Nous restons à votre disposition pour toutes vos questions. N'hésitez pas à nous contacter !
+      </div>
+    </div>
+    <div class="person">
+      <%= image_tag "serors.png", {class: "avatar"}%>
+      <div class="contact">
+        <div class="nom">Martine et Didier</div>
+        <a href="mailto:m.seror@mas-avocat.fr" class="fas fa-envelope"> </a>
+      </div>
+    </div>
+  </div>
+
+
 
 <!--   <div class="une-carte" >
     <div class="role">
@@ -33,10 +70,11 @@
     </div>
   </div> -->
 
-  <div class="une-carte" >
+  <div class="une-carte carte-personne" >
     <div class="role">
       <h3>Responsable liste et cadeaux</h3>
-      <p> Vous souaitez offrir un cadeau? Vous pouvez participer a la cagnotte Des interrogations sur les cadeaux qui nous font plaisir? Adressez vous à Elie pour Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class = "text-description">  Vous souaitez offrir un cadeau? Vous pouvez participer a <a href="">la cagnotte</a> pour le voyage de noce ou bien demander notre liste à Elie !
+        </div>
     </div>
     <div class="person">
       <%= image_tag "elie.png", {class: "avatar"}%>
@@ -48,10 +86,11 @@
 </div>
 
 
-  <div class="une-carte" >
+  <div class="une-carte carte-personne" >
     <div class="role">
       <h3>Responsable discours</h3>
-      <p>Adressez vous à Maël pour Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class = "text-description"> Si vous souhaitez faire un discours, merci de vous dressez vous à Maël, qui coordonnera toutes les interventions !
+      </div>
     </div>
     <div class="person">
       <%= image_tag "mael.png", {class: "avatar"}%>
