@@ -20,7 +20,6 @@ else if (url == "http://localhost:3000/programme" ||
     url == "http://www.sarahetelliot.fr/programme" ||
     url == "http://sarahetelliot.fr/programme"){
 
-
 var session_password = sessionStorage.getItem("session_password");
 const vendredi = document.getElementById("vendredi");
 const samedi = document.getElementById("samedi");
