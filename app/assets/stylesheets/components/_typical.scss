@@ -33,10 +33,10 @@ display: none;
     min-height: 90vh;
 
   @media only screen and (max-width: 600px){
-    max-width:90%;
-    background-color: blue;
+    // max-width:90%;
+    // background-color: blue;
   flex-direction: column;
-  max-height: 60vh !important;
+  // max-height: 60vh !important;
   }
 }
 
@@ -69,8 +69,8 @@ text-align: center;
   justify-content: space-between;
 
     @media only screen and (max-width: 600px){
-      max-width:90%;
-      background-color: blue;
+      // max-width:90%;
+      // background-color: blue;
     flex-direction: column;
     // margin: 0px;
   }
