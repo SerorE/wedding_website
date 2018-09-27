@@ -5,6 +5,7 @@ var url = window.location.href;
  var session_solved = sessionStorage.getItem("session_solved");
 
 if ((url == "http://localhost:3000/" ||
+    url == "www.sarahetelliot.fr/" ||
     url == "http://www.sarahetelliot.fr/" ||
     url == "http://sarahetelliot.fr/") && (session_solved != "true")){
 const promptBox = document.getElementById("prompt-box");
@@ -18,6 +19,7 @@ askforcode(promptBox,overlay,codeError);
 //changer cette condition à si pas de code valide
 else if (url == "http://localhost:3000/programme" ||
     url == "http://www.sarahetelliot.fr/programme" ||
+    url == "hwww.sarahetelliot.fr/programme" ||
     url == "http://sarahetelliot.fr/programme"){
 
 var session_password = sessionStorage.getItem("session_password");
