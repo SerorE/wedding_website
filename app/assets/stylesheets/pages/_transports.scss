@@ -20,8 +20,10 @@ justify-content: space-around;
 }
 
 .description-logement {
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
