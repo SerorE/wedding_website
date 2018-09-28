@@ -1,10 +1,10 @@
 // Specific CSS for your home-page
 .all-container {
-    @media only screen and (max-width: 800px){
+    @media only screen and (max-width: 600px){
               background-color: #afd8e5;
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 600px){
     min-height: 95vh;
   }
 
@@ -27,7 +27,7 @@ h2 {
 
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 600px){
 
       min-height: 90vh;
   display: flex;
